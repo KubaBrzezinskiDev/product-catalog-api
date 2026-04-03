@@ -56,7 +56,8 @@ The system has following entities:
 
 ### Clone Repository
 
-cd
+git clone https://github.com/KubaBrzezinskiDev/product-catalog-api.git
+cd product-catalog-api
 
 ### Run application 
 
