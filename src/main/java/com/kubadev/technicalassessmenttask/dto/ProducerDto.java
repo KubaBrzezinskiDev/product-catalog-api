@@ -1,8 +1,6 @@
 package com.kubadev.technicalassessmenttask.dto;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,14 +10,11 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ProductRequestDto {
+public class ProducerDto {
 
-    @NotNull
-    private Long producerId;
+    private Long id;
 
-    @NotBlank
     private String name;
 
-    @Valid
-    private List<ProductAttributeDto> productAttributes;
+    private List<ProductDto> products;
 }

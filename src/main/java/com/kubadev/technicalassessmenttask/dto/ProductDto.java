@@ -16,7 +16,6 @@ public class ProductDto {
 
     private Long producerId;
 
-    @NotBlank
     private String name;
 
     private List<ProductAttributeDto> productAttributes;

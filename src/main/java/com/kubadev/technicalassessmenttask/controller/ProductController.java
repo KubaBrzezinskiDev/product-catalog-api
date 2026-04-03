@@ -3,6 +3,7 @@ package com.kubadev.technicalassessmenttask.controller;
 import com.kubadev.technicalassessmenttask.dto.ProductDto;
 import com.kubadev.technicalassessmenttask.dto.ProductRequestDto;
 import com.kubadev.technicalassessmenttask.service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -38,13 +39,13 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> addProduct(@RequestBody ProductRequestDto productDto){
+    public ResponseEntity<Void> addProduct(@Valid @RequestBody ProductRequestDto productDto){
         productService.addProduct(productDto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateProduct(@PathVariable Long id, @RequestBody ProductRequestDto productDto){
+    public ResponseEntity<Void> updateProduct(@PathVariable Long id,@Valid @RequestBody ProductRequestDto productDto){
         productService.updateProduct(id, productDto);
         return ResponseEntity.noContent().build();
     }

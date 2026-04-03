@@ -27,12 +27,13 @@ public class ProductMapper {
         ProductDto productDto = new ProductDto();
         productDto.setId(product.getId());
         productDto.setName(product.getName());
+        productDto.setProducerId(product.getProducer().getId());
         List<ProductAttributeDto> productAttributeDtos = new ArrayList<>();
         if(product.getProductAttributes() != null) {
             productAttributeDtos = product.getProductAttributes()
                     .stream()
                     .map(productAttributeMapper::toDto)
-                    .collect(Collectors.toList());
+                    .toList();
             productDto.setProductAttributes(productAttributeDtos);
         }
         return productDto;

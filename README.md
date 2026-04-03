@@ -16,12 +16,12 @@ This is a simple API that performs basic CRUD operations on products in the data
 
 ## Features
 
-- Create product
-- Update product
-- Delete product
-- Get all products
+- Create product and producer
+- Update product and producer
+- Delete product and producer
+- Get all products and producers
 - Get all products with specified attributes
-- Search products by their name, producent name or value of attribute
+- Search products by their name, producer name or value of attribute
 
 ## Data Model
 
@@ -34,12 +34,19 @@ The system has following entities:
 
 ## API Endpoints
 
+### Products
 - GET /products
 - GET /products/filtered
 - GET /products/search
 - POST /products
 - PUT /products/{id}
 - DELETE /products/{id}
+### Producers
+- GET /producers/{id}
+- GET /producers
+- POST /producers
+- PUT /producers
+- DELETE /producers
 
 ## Design Decisions
 
